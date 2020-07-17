@@ -4,7 +4,8 @@ Write a function named sum_values that takes a dictionary named my_dictionary as
 The function should return the sum of the values of the dictionary
 """
 # Write your sum_values function here:
-
+'11111'
+print("Hello, world!")
 # Uncomment these function calls to test your sum_values function:
 # print(sum_values({"milk":5, "eggs":2, "flour": 3}))
 # should print 10
@@ -68,3 +69,4 @@ The function should return the key associated with the largest value in the dict
 # should print 1
 # print(max_key({"a":100, "b":10, "c":1000}))
 # should print "c"
+"new commit"
