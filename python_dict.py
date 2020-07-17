@@ -4,6 +4,7 @@ Write a function named sum_values that takes a dictionary named my_dictionary as
 The function should return the sum of the values of the dictionary
 """
 # Write your sum_values function here:
+'11111'
 print("Hello, world!")
 # Uncomment these function calls to test your sum_values function:
 # print(sum_values({"milk":5, "eggs":2, "flour": 3}))
