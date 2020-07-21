@@ -4,11 +4,13 @@ Write a function named sum_values that takes a dictionary named my_dictionary as
 The function should return the sum of the values of the dictionary
 """
 # Write your sum_values function here:
+def sum_values(my_dictionary):
+    return sum(my_dictionary.values())
 
 # Uncomment these function calls to test your sum_values function:
-# print(sum_values({"milk":5, "eggs":2, "flour": 3}))
+print(sum_values({"milk":5, "eggs":2, "flour": 3}))
 # should print 10
-# print(sum_values({10:1, 100:2, 1000:3}))
+print(sum_values({10:1, 100:2, 1000:3}))
 # should print 6
 
 
@@ -20,11 +22,16 @@ as a parameter. This function should return the sum of the values of all even ke
 
 
 # Write your sum_even_keys function here:
-
+def sum_even_keys(my_dictionary):
+    sum = 0
+    for key in my_dictionary:
+        if key % 2 == 0:
+            sum += my_dictionary[key]
+    return sum
 # Uncomment these function calls to test your  function:
-# print(sum_even_keys({1:5, 2:2, 3:3}))
+print(sum_even_keys({1:5, 2:2, 3:3}))
 # should print 2
-# print(sum_even_keys({10:1, 100:2, 1000:3}))
+print(sum_even_keys({10:1, 100:2, 1000:3}))
 # should print 6
 
 
@@ -36,9 +43,9 @@ The function should add 10 to every value in my_dictionary and return my_diction
 # Write your add_ten function here:
 
 # Uncomment these function calls to test your  function:
-# print(add_ten({1:5, 2:2, 3:3}))
+#print(add_ten({1:5, 2:2, 3:3}))
 # should print {1:15, 2:12, 3:13}
-# print(add_ten({10:1, 100:2, 1000:3}))
+#print(add_ten({10:1, 100:2, 1000:3}))
 # should print {10:11, 100:12, 1000:13}
 
 
@@ -62,7 +69,14 @@ Write a function named max_key that takes a dictionary named my_dictionary as a 
 The function should return the key associated with the largest value in the dictionary.
 """
 # Write your max_key function here:
-
+def max_key(my_dictionary):
+ max_val = 0
+ for key in my_dictionary.keys():
+   for value in my_dictionary.values():
+     if value > max_val:
+       max_val = value
+   if my_dictionary[key] == max_val:
+       return key
 # Uncomment these function calls to test your  function:
 # print(max_key({1:100, 2:1, 3:4, 4:10}))
 # should print 1
