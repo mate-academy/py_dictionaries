@@ -13,7 +13,8 @@ print (sum_values(my_dictionary))
 def sum_even_keys (my_dictionary):
    count = 0
    for key in my_dictionary.keys():
-       count += my_dictionary[key]
+       if key % 2 == 0:
+           count += my_dictionary[key]
    return count
 my_dictionary = {1:5, 2:2, 3:3}
 print(sum_even_keys(my_dictionary))
