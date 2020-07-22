@@ -4,11 +4,16 @@ Write a function named sum_values that takes a dictionary named my_dictionary as
 The function should return the sum of the values of the dictionary
 """
 # Write your sum_values function here:
+def sum_values(my_dictionary):
+    res = 0
+    for x in my_dictionary:
+        res = res + my_dictionary[x]
 
+    return res
 # Uncomment these function calls to test your sum_values function:
-# print(sum_values({"milk":5, "eggs":2, "flour": 3}))
+print(sum_values({"milk":5, "eggs":2, "flour": 3}))
 # should print 10
-# print(sum_values({10:1, 100:2, 1000:3}))
+print(sum_values({10:1, 100:2, 1000:3}))
 # should print 6
 
 
@@ -20,11 +25,17 @@ as a parameter. This function should return the sum of the values of all even ke
 
 
 # Write your sum_even_keys function here:
+def sum_even_keys(my_dictionary):
+    res = 0
+    for x in my_dictionary:
+        if x % 2 == 0:
+            res = res + my_dictionary[x]
 
+    return res
 # Uncomment these function calls to test your  function:
-# print(sum_even_keys({1:5, 2:2, 3:3}))
+print(sum_even_keys({1:5, 2:2, 3:3}))
 # should print 2
-# print(sum_even_keys({10:1, 100:2, 1000:3}))
+print(sum_even_keys({10:1, 100:2, 1000:3}))
 # should print 6
 
 
@@ -62,9 +73,18 @@ Write a function named max_key that takes a dictionary named my_dictionary as a 
 The function should return the key associated with the largest value in the dictionary.
 """
 # Write your max_key function here:
+def max_key(my_dictionary):
+    value = 0
+    key = 0
+    for x in my_dictionary:
+        if value < my_dictionary[x]:
+            value = my_dictionary[x]
+            key = x
+
+    return key
 
 # Uncomment these function calls to test your  function:
-# print(max_key({1:100, 2:1, 3:4, 4:10}))
+print(max_key({1:100, 2:1, 3:4, 4:10}))
 # should print 1
-# print(max_key({"a":100, "b":10, "c":1000}))
+print(max_key({"a":100, "b":10, "c":1000}))
 # should print "c"
